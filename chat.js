@@ -23,4 +23,14 @@ button.style.opacity = '0';
 button.style.transition = 'opacity 1s ease';
 button.style.cursor = 'pointer';
 button.style.zIndex = '9999';
-button
+button.style.boxShadow = '0 2px 4px rgba(0, 0, 0, 0.2)'; // Optional: add a shadow
+
+// Append and fade in
+link.appendChild(button);
+document.body.appendChild(link);
+
+window.addEventListener('load', function () {
+  requestAnimationFrame(() => {
+    button.style.opacity = '1';
+  });
+});
