@@ -24,7 +24,7 @@ button.style.transition = 'opacity 1s ease';
 button.style.cursor = 'pointer';
 button.style.zIndex = '9999';
 button.style.boxShadow = '0 2px 4px rgba(0, 0, 0, 0.2)';
-button.style.transform = 'translateY(1px)'; // shift emoji slightly downward
+button.style.transform = 'translateY(3px)'; // shift emoji slightly downward
 
 // Append and fade in
 link.appendChild(button);
