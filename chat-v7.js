@@ -7,7 +7,9 @@ window.addEventListener('DOMContentLoaded', () => {
   if (isMobile) {
     // SMS link with pre-filled text for mobile
     const phoneNumber = '18554878041'; // no dashes or spaces
-    const message = encodeURIComponent('Replace this text with your question and send away to the YMCA 🤩');
+    const message = encodeURIComponent(
+      'Replace this text with your question and send away to the YMCA 🤩\n\nBy messaging us, you agree to receive updates on your inquiry.'
+    );
     link.href = `sms:${phoneNumber}?&body=${message}`;
   } else {
     // Desktop form
