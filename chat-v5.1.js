@@ -1,20 +1,7 @@
 window.addEventListener('DOMContentLoaded', () => {
-  // Detect if device is mobile
-  const isMobile = window.matchMedia('(max-width: 600px)').matches;
-
   // Create anchor element
   const link = document.createElement('a');
-  if (isMobile) {
-    // SMS link with pre-filled text for mobile
-    const phoneNumber = '18554878041'; // no dashes or spaces
-    const message = encodeURIComponent(
-      'Replace this text with your question and send away to the YMCA 🤩\n\nBy messaging us, you agree to receive updates on your inquiry.'
-    );
-    link.href = `sms:${phoneNumber}?&body=${message}`;
-  } else {
-    // Desktop form
-    link.href = 'https://forms.fillout.com/t/eZLjjVsMS3us';
-  }
+  link.href = 'https://forms.fillout.com/t/eZLjjVsMS3us';
   link.target = '_blank';
   link.style.textDecoration = 'none';
 
@@ -43,7 +30,7 @@ window.addEventListener('DOMContentLoaded', () => {
   let fontSize = 18;
 
   // Apply larger size for mobile devices
-  if (isMobile) {
+  if (window.matchMedia('(max-width: 600px)').matches) {
     width = 42;
     height = 42;
     fontSize = 22;
